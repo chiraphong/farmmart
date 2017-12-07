@@ -19,6 +19,9 @@ if (!is_null($events['events'])) {
 			$messages = [
 				'type' => 'text',
 				'text' => $text
+				if($text == "NO"){
+ 				"NOt" => $text;
+				}
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
@@ -27,8 +30,7 @@ if (!is_null($events['events'])) {
 				'replyToken' => $replyToken,
 				'messages' => [$messages],
 			];
-			if($text == "NO"){
-				$data = "NOt"}
+			
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
