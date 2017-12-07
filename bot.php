@@ -19,9 +19,7 @@ if (!is_null($events['events'])) {
 			$messages = [
 				'type' => 'text',
 				'text' => $text
-				if($text == "NO"){
- 				"NOt" => $text;
-				}
+				
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
