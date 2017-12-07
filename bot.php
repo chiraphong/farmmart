@@ -27,10 +27,11 @@ if (!is_null($events['events'])) {
 				'replyToken' => $replyToken,
 				'messages' => [$messages],
 			];
-			$post = json_encode($data);
-			if($post == "NO"){
-			$post => "Yes"
+			
+			if($data == "NO"){
+			$data = "Yes"
 			}
+			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
 			$ch = curl_init($url);
