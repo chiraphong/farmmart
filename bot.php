@@ -28,9 +28,6 @@ if (!is_null($events['events'])) {
 				'messages' => [$messages],
 			];
 			
-			if($data == "NO"){
-			$data = "Yes"
-			}
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
